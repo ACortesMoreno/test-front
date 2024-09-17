@@ -4,7 +4,7 @@ function enviarFormulario() {
     const peso = document.getElementById('peso').value;
     const talla = document.getElementById('talla').value;
 
-    fetch('https://test-backend-riux.onrender.com/api/zscores', { // Asegúrate de que esta URL sea correcta
+    fetch('https://test-backend-riux.onrender.com/api/zscores', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -13,9 +13,18 @@ function enviarFormulario() {
     })
         .then(response => response.json())
         .then(data => {
+            // Mapeo de claves a etiquetas
+            const etiquetas = {
+                zPesoYEdad: 'Peso/Edad',
+                zTallaYEdad: 'Talla/Edad',
+                zPesoYTalla: 'Peso/Talla'
+            };
+
+            // Generar resultados en el formato deseado
             let resultados = '';
             for (const [key, value] of Object.entries(data)) {
-                resultados += `${key}: ${value !== null ? JSON.stringify(value, null, 2) : 'No se encontraron valores'}\n\n`;
+                const etiqueta = etiquetas[key] || key;
+                resultados += `${etiqueta}: **${value !== null ? value : 'No se encontraron valores'}**\n\n`;
             }
             document.getElementById('resultados').innerText = resultados;
         })
