@@ -68,3 +68,5 @@ function enviarFormulario() {
             console.error('Error:', error);
         });
 }
+
+console.log('Desde script.js')
