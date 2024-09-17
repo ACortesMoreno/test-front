@@ -6,7 +6,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #f4f0f8; /* Fondo en lila claro */
+  background-color: #f0f4f8;
   color: #333;
   display: flex;
   justify-content: center;
@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -27,7 +27,7 @@ body {
 
 .title {
   font-size: 1.8rem;
-  color: #7d4da3; /* Título en morado suave */
+  color: #007bff;
   margin-bottom: 20px;
 }
 
@@ -46,26 +46,24 @@ body {
 label {
   font-weight: bold;
   margin-bottom: 5px;
-  color: #7d4da3; /* Etiquetas en morado suave */
 }
 
 .input {
   padding: 10px;
-  border: 1px solid #c4b5d1; /* Borde en lila claro */
+  border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 1rem;
   transition: border-color 0.2s;
-  background-color: #f0e6f8; /* Fondo del input en lila claro */
 }
 
 .input:focus {
-  border-color: #7d4da3; /* Borde en morado suave al enfocar */
+  border-color: #007bff;
   outline: none;
 }
 
 .button {
   padding: 12px;
-  background-color: #7d4da3; /* Botón en morado suave */
+  background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
@@ -75,13 +73,13 @@ label {
 }
 
 .button:hover {
-  background-color: #5e3d7b; /* Efecto hover en morado más oscuro */
+  background-color: #0056b3;
 }
 
 .resultados {
   margin-top: 20px;
-  background-color: #f0e6f8; /* Fondo de resultados en lila claro */
-  border: 1px solid #c4b5d1; /* Borde en lila claro */
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
   border-radius: 5px;
   padding: 15px;
   font-family: "Courier New", monospace;
@@ -95,5 +93,4 @@ label {
   display: block;
   margin-bottom: 10px;
   font-size: 1.2rem;
-  color: #7d4da3; /* Texto "Resultados" en morado suave */
 }
