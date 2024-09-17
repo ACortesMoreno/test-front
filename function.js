@@ -17,7 +17,8 @@ function enviarFormulario() {
             const etiquetas = {
                 zPesoYEdad: 'Peso/Edad',
                 zTallaYEdad: 'Talla/Edad',
-                zPesoYTalla: 'Peso/Talla'
+                zPesoYTalla: 'Peso/Talla',
+                zIMCYEdad: 'IMC/Edad'
             };
 
             // Generar resultados en el formato deseado
