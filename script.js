@@ -24,9 +24,9 @@ function enviarFormulario() {
             let resultados = '';
             for (const [key, value] of Object.entries(data)) {
                 const etiqueta = etiquetas[key] || key;
-                resultados += `${etiqueta}: **${value !== null ? value : 'No se encontraron valores'}**\n\n`;
+                resultados += `${etiqueta}: <strong>${value !== null ? value : 'No se encontraron valores'}</strong><br><br>`;
             }
-            document.getElementById('resultados').innerText = resultados;
+            document.getElementById('resultados').innerHTML = resultados;
         })
         .catch(error => {
             console.error('Error:', error);
