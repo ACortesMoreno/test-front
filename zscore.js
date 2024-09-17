@@ -4,7 +4,7 @@ function enviarFormulario() {
     const peso = document.getElementById('peso').value;
     const talla = document.getElementById('talla').value;
 
-    fetch('https://test-backend-riux.onrender.com/api/zscores', {
+    fetch('https://test-backend-riux.onrender.com/api/zscores', { // Asegúrate de que esta URL sea correcta
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -14,24 +14,10 @@ function enviarFormulario() {
         .then(response => response.json())
         .then(data => {
             let resultados = '';
-            const etiquetas = {
-                zPesoYEdad: 'Peso por Edad',
-                zTallaYEdad: 'Talla por Edad',
-                zPesoYTalla: 'Peso por Talla'
-            };
-
             for (const [key, value] of Object.entries(data)) {
-                const etiqueta = etiquetas[key] || key;
-
-                // Verifica si el valor es un número antes de usar toFixed
-                const valorFormateado = (typeof value === 'number' && !isNaN(value))
-                    ? value.toFixed(2)
-                    : 'No se encontraron valores';
-
-                resultados += `${etiqueta}: *${valorFormateado}*\n\n`;
+                resultados += `${key}: ${value !== null ? JSON.stringify(value, null, 2) : 'No se encontraron valores'}\n\n`;
             }
-
-            document.getElementById('resultados').innerHTML = resultados.replace(/\n/g, '<br>');
+            document.getElementById('resultados').innerText = resultados;
         })
         .catch(error => {
             console.error('Error:', error);
