@@ -22,7 +22,13 @@ function enviarFormulario() {
 
             for (const [key, value] of Object.entries(data)) {
                 const etiqueta = etiquetas[key] || key;
-                resultados += `${etiqueta}: *${value !== null ? value.toFixed(2) : 'No se encontraron valores'}*\n\n`;
+
+                // Verifica si el valor es un número antes de usar toFixed
+                const valorFormateado = (typeof value === 'number' && !isNaN(value))
+                    ? value.toFixed(2)
+                    : 'No se encontraron valores';
+
+                resultados += `${etiqueta}: *${valorFormateado}*\n\n`;
             }
 
             document.getElementById('resultados').innerHTML = resultados.replace(/\n/g, '<br>');
