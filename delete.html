@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Z-Scores</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 class="main-title">Calculadora de Z-Scores</h1>
+        <p class="subtitle">Calcula los Z-scores de 0 a 19 años con precisión.</p>
+    </header>
+
+    <div class="main-content">
+        <!-- Anuncios Laterales Izquierda -->
+        <aside class="ad-left">
+            <div class="ads-container">
+                <p>Espacio para anuncio</p>
+            </div>
+        </aside>
+
+        <!-- Contenido Principal (Calculadora) -->
+        <div class="container">
+            <form id="formulario" class="formulario">
+                <div class="form-group">
+                    <label for="genero">Género:</label>
+                    <select id="genero" class="input">
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="edadMeses">Edad (Meses):</label>
+                    <input type="number" id="edadMeses" class="input" placeholder="Edad en meses">
+                </div>
+                <div class="form-group">
+                    <label for="peso">Peso (kg):</label>
+                    <input type="number" id="peso" class="input" placeholder="Peso en kilogramos">
+                </div>
+                <div class="form-group">
+                    <label for="talla">Talla (cm):</label>
+                    <input type="number" id="talla" class="input" placeholder="Talla en centímetros">
+                </div>
+                <button type="button" class="button" onclick="enviarFormulario()">Calcular</button>
+            </form>
+
+            <div id="resultados" class="resultados"></div>
+
+            <!-- Anuncio debajo de la calculadora -->
+            <!-- <div class="ads-container">
+                <p>Espacio para anuncio debajo de la calculadora</p>
+            </div> -->
+        </div>
+
+        <!-- Anuncios Laterales Derecha -->
+        <aside class="ad-right">
+            <div class="ads-container">
+                <p>Espacio para anuncio</p>
+            </div>
+        </aside>
+
+    </div>´
+    <div class="ads-container">
+        <p>Espacio para anuncio debajo de la calculadora</p>
+    </div>
+
+    <!-- Texto Explicativo sobre Z-scores -->
+    <section class="explicacion-zscores">
+        <h2>¿Qué es el Z-Score de Nutrición?</h2>
+        <p>El <strong>Z-Score de nutrición</strong> es una herramienta estadística clave para evaluar el estado
+            nutricional al comparar las medidas de un individuo con un grupo de referencia. Esta medida se utiliza para
+            determinar si indicadores antropométricos como el peso y la talla se ajustan a los estándares establecidos
+            para una población de referencia.</p>
+
+        <p>El <strong>Z-Score</strong> se calcula utilizando la desviación estándar y proporciona una forma
+            estandarizada de evaluar el crecimiento y desarrollo en función de datos de referencia. Esta herramienta es
+            crucial en el monitoreo de la nutrición y en la identificación de posibles problemas de salud.</p>
+
+        <h3>¿Cómo se Calcula el Z-Score de Nutrición?</h3>
+        <p>El cálculo del <strong>Z-Score</strong> se basa en las siguientes fórmulas:</p>
+        <ul>
+            <li><strong>Z-Score = (Valor observado - Media de referencia) / Desviación estándar de referencia</strong>
+            </li>
+        </ul>
+
+        <p>Los <strong>Z-Scores</strong> permiten a los profesionales de la salud evaluar si un individuo está:</p>
+        <ul>
+            <li><strong>Por debajo del rango normal:</strong> Puede indicar desnutrición o problemas de salud que
+                requieren intervención.</li>
+            <li><strong>Dentro del rango normal:</strong> Sugiere que el crecimiento y desarrollo son adecuados según
+                los estándares establecidos.</li>
+            <li><strong>Por encima del rango normal:</strong> Podría señalar sobrepeso u otros problemas relacionados
+                con la nutrición.</li>
+        </ul>
+
+        <p>Utilizar el <strong>Z-Score de nutrición</strong> es fundamental para un monitoreo efectivo y para diseñar
+            estrategias de intervención adecuadas cuando se detectan desviaciones significativas de la norma.</p>
+
+        <!-- Anuncio debajo del texto explicativo -->
+        <br>
+        <br>
+        <div class="ads-container">
+            <p>Espacio para anuncio debajo del texto explicativo</p>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="ads-container">
+            <p>Espacio para anuncio en el footer</p>
+        </div>
+    </footer>
+
+    <script src="function.js"></script>
+</body>
+
+</html>
