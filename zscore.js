@@ -4,7 +4,7 @@ function enviarFormulario() {
     const peso = document.getElementById('peso').value;
     const talla = document.getElementById('talla').value;
 
-    fetch('https://test-backend-riux.onrender.com/api/zscores', {
+    fetch('https://test-backend-riux.onrender.com/api/zscores', { // Asegúrate de que esta URL sea correcta
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
