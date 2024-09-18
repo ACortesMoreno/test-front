@@ -39,7 +39,7 @@ function enviarFormulario() {
 
     const edadMeses = calcularEdadEnMeses(fechaNacimiento, fechaEvaluacion);
 
-    fetch('https://test-backend-riux.onrender.com/api/zscores', {
+    fetch('https://test-backend-riux.onrender.com', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
