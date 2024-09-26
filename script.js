@@ -75,4 +75,4 @@ function enviarFormulario() {
         });
 }
 
-console.log('Ruta actualizada');
+console.log('Form actualizada');
