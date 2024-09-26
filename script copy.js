@@ -37,20 +37,14 @@ function enviarFormulario() {
         return;
     }
 
-    // Convertir las fechas a formato ISO para asegurar consistencia (YYYY-MM-DD)
-    const fechaNacimientoISO = new Date(fechaNacimiento).toISOString().split('T')[0];  // YYYY-MM-DD
-    const fechaEvaluacionISO = new Date(fechaEvaluacion).toISOString().split('T')[0];  // YYYY-MM-DD
+    const edadMeses = calcularEdadEnMeses(fechaNacimiento, fechaEvaluacion);
 
-    // Calcular la edad en meses usando las fechas normalizadas (en formato ISO)
-    const edadMeses = calcularEdadEnMeses(fechaNacimientoISO, fechaEvaluacionISO);
-
-    // Hacer la solicitud POST al backend con los datos
     fetch('https://test-backend-riux.onrender.com/api/zscores', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ genero, edadMeses, peso, talla }), // Enviar datos
+        body: JSON.stringify({ genero, edadMeses, peso, talla }),
     })
         .then(response => response.json())
         .then(data => {
@@ -75,4 +69,4 @@ function enviarFormulario() {
         });
 }
 
-console.log('Ruta actualizada');
+console.log('Ruta actualizada')
